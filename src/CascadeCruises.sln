@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CascadeCruises", "CascadeCruises\CascadeCruises.csproj", "{3D4B2ED9-A1BE-476B-B8F2-F837C8FD8220}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{28D80384-D821-4B94-BB93-6FF97135A5AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter.EF", "Adapter.EF\Adapter.EF.csproj", "{8512F053-1AEE-4328-BF75-11AF38B8FEE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{8776AF31-6291-4DC9-B53E-19AC8D668267}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{B319F247-69EE-4C45-90A4-6F35AE5B9970}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatabaseScripts", "DatabaseScripts", "{15B025FA-7369-408E-BE30-EA0D00C231FA}"
+	ProjectSection(SolutionItems) = preProject
+		DatabaseScripts\CascadeCruisesData.sql = DatabaseScripts\CascadeCruisesData.sql
+		DatabaseScripts\CascadeCruisesSchema.sql = DatabaseScripts\CascadeCruisesSchema.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D4B2ED9-A1BE-476B-B8F2-F837C8FD8220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D4B2ED9-A1BE-476B-B8F2-F837C8FD8220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D4B2ED9-A1BE-476B-B8F2-F837C8FD8220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D4B2ED9-A1BE-476B-B8F2-F837C8FD8220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D80384-D821-4B94-BB93-6FF97135A5AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D80384-D821-4B94-BB93-6FF97135A5AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D80384-D821-4B94-BB93-6FF97135A5AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D80384-D821-4B94-BB93-6FF97135A5AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8512F053-1AEE-4328-BF75-11AF38B8FEE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8512F053-1AEE-4328-BF75-11AF38B8FEE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8512F053-1AEE-4328-BF75-11AF38B8FEE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8512F053-1AEE-4328-BF75-11AF38B8FEE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8776AF31-6291-4DC9-B53E-19AC8D668267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8776AF31-6291-4DC9-B53E-19AC8D668267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8776AF31-6291-4DC9-B53E-19AC8D668267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8776AF31-6291-4DC9-B53E-19AC8D668267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B319F247-69EE-4C45-90A4-6F35AE5B9970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B319F247-69EE-4C45-90A4-6F35AE5B9970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B319F247-69EE-4C45-90A4-6F35AE5B9970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B319F247-69EE-4C45-90A4-6F35AE5B9970}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B9D42B3-D4FC-44C3-8208-F4638C716621}
+	EndGlobalSection
+EndGlobal
