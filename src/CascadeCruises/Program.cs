@@ -1,27 +1,29 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using CQS_Demo.Configurations;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
+using Services.Configuration;
 
-namespace CQS_Demo
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Configuration.AddJsonFile("appSettings.json", true);
+builder.Configuration.AddEnvironmentVariables();
+
+DependencyResolver.RegisterTypes(builder.Services, builder.Configuration);
+
+AppConfigurations.AddControllers(builder.Services);
+AppConfigurations.ConfigureSwaggerServices(builder.Services);
+AppConfigurations.AddMediatr(builder.Services);
+AppConfigurations.AddHttpContextAccessor(builder.Services);
+
+var app = builder.Build();
+
+AppConfigurations.ConfigureSwagger(app);
+
+app.UseHttpsRedirection();
+app.UseRouting();
+app.UseEndpoints(endpoints =>
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+    endpoints.MapDefaultControllerRoute();
+});
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-            .ConfigureLogging(logging =>
-            {
-                logging.ClearProviders();
-                logging.AddConsole();
-                logging.SetMinimumLevel(LogLevel.Trace);
-            })
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-                webBuilder.UseStartup<Startup>();
-            });
-    }
-}
+app.Run();

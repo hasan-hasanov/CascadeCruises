@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "CQS Demo": {
+    "Cascade Cruises": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

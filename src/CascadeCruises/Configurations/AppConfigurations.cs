@@ -10,27 +10,26 @@ namespace CQS_Demo.Configurations
 {
     public class AppConfigurations
     {
-        public static void AddMvc(IServiceCollection services)
+        public static void AddControllers(IServiceCollection services)
         {
-            services.AddMvcCore(options =>
+            services.AddControllers(options =>
             {
                 options.Filters.Add(new ProducesAttribute("application/json"));
                 options.Filters.Add(typeof(GlobalExceptionHandlingFilter));
-            })
-            .AddApiExplorer()
-            .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            });
         }
 
         public static void ConfigureSwaggerServices(IServiceCollection services)
         {
-            services.AddSwaggerGen(s =>
-            {
-                s.SwaggerDoc("v1", new OpenApiInfo()
-                {
-                    Title = "Cascade Cruises",
-                    License = new OpenApiLicense { Name = "Zeyneb Dzhelil" }
-                });
-            });
+            services.AddEndpointsApiExplorer();
+            services.AddSwaggerGen(setupAction =>
+           {
+               setupAction.SwaggerDoc("v1", new OpenApiInfo()
+               {
+                   Title = "Cascade Cruises",
+                   License = new OpenApiLicense { Name = "Hasan Hasanov" }
+               });
+           });
         }
 
         public static void AddMediatr(IServiceCollection services)

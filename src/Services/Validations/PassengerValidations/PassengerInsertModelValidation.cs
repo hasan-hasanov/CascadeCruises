@@ -22,7 +22,7 @@ namespace Infrastructure.Validations.PassengerValidations
             if (string.IsNullOrWhiteSpace(model.PIN))
                 errorMessages.Add($"{nameof(model.PIN)} is required");
 
-            if (model.DateOfBirth == null)
+            if (model.DateOfBirth == DateTime.MinValue)
                 errorMessages.Add($"{nameof(model.DateOfBirth)} is required");
 
             if (errorMessages.Any())
